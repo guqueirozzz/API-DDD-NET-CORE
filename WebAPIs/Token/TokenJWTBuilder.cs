@@ -13,7 +13,7 @@ namespace WebAPIs.Token
         private Dictionary<string, string> claims = new Dictionary<string, string>();
         private int expireInMinutes = 5;
 
-        public TokenJWTBuilder AddSecutiryKey(SecurityKey securitKey)
+        public TokenJWTBuilder AddSecurityKey(SecurityKey securitKey)
         {
             this.securitKey = securitKey;
             return this;
@@ -34,6 +34,18 @@ namespace WebAPIs.Token
         public TokenJWTBuilder AddClaim(string type, string value)
         {
             this.claims.Add(type, value);
+            return this;
+        }
+
+        public TokenJWTBuilder AddAudience(string audience)
+        {
+            this.audience = audience;
+            return this;
+        }
+
+        public TokenJWTBuilder AddExpireInMinutes(int expireInMinutes)
+        {
+            this.expireInMinutes = expireInMinutes;
             return this;
         }
 
