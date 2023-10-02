@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Repositories
 {
-    internal class RepositoryMessage : RepositoryGenerics<Message>, IMessage
+    public class RepositoryMessage : RepositoryGenerics<Message>, IMessage
     {
         private readonly DbContextOptions<ContextBase> _optionsBuilder;
         public RepositoryMessage()

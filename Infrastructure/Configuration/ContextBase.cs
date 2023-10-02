@@ -16,11 +16,11 @@ namespace Infrastructure.Configuration
             
         }    
         public DbSet<Message> Message { get; set; } 
-        public DbSet<ApplicationUser> ApplicationsUser { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         public string ObterStringConexao()
         {
-            return "Server=DESKTOP-1RR2K2L\\MSSQLSERVER01;Database=DevEvents;Trusted_Connection=True; trustServerCertificate=true";
+            return "Server=DESKTOP-1RR2K2L\\MSSQLSERVER01;Database=API_DDD_2023;Trusted_Connection=True; trustServerCertificate=true";
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

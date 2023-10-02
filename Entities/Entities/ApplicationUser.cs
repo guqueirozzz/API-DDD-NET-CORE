@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Entities.Enums;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,6 @@ namespace Entities.Entities
         public string CPF { get; set; }
 
         [Column("user_tipo")]
-        public int Tipo { get; set; }
+        public TipoUsuario? Tipo { get; set; }
     }
 }
